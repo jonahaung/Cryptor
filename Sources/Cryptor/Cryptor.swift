@@ -83,19 +83,6 @@ public extension Cryptor {
     }
 }
 
-public extension Cryptor {
-    static func base64String(with privateKey: Curve25519.KeyAgreement.PrivateKey) -> String {
-        privateKey.rawRepresentation.base64EncodedString(options: Data.Base64EncodingOptions(rawValue: 0))
-    }
-    
-    static func privateKey(with base64String: String) -> Curve25519.KeyAgreement.PrivateKey? {
-        guard let data = Data(base64Encoded: base64String), let privateKey = try? Curve25519.KeyAgreement.PrivateKey(rawRepresentation: data) else {
-            return nil
-        }
-        return privateKey
-    }
-}
-
 //
 // MARK: - Human friendly conversion utils
 //
