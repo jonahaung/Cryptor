@@ -67,7 +67,7 @@ public extension Cryptor {
 }
 
 //
-// MARK: - PublicKey conversion utils
+// MARK: - Private conversion utils
 //
 
 public extension Cryptor {
